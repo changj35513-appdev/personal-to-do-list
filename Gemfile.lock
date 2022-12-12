@@ -1,13 +1,4 @@
 GIT
-  remote: https://github.com/firstdraft/draft_generators.git
-  revision: 2635764769e293ef79d8183392cd4e8ae17cc2c4
-  branch: winter-2020
-  specs:
-    draft_generators (0.0.3)
-      devise
-      indefinite_article
-
-GIT
   remote: https://github.com/firstdraft/grade_runner.git
   revision: 93e5954a4c7e0e23395644039d4bd26e2411a3c6
   specs:
@@ -160,8 +151,6 @@ GEM
     http-form_data (2.3.0)
     i18n (1.10.0)
       concurrent-ruby (~> 1.0)
-    indefinite_article (0.2.5)
-      activesupport
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
@@ -363,8 +352,8 @@ DEPENDENCIES
   bootsnap (>= 1.4.2)
   byebug
   capybara
+  devise
   dotenv-rails
-  draft_generators!
   factory_bot_rails
   faker
   grade_runner!
