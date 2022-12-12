@@ -10,7 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_12_12_165222) do
+ActiveRecord::Schema.define(version: 2022_12_12_203438) do
+
+  create_table "bookmarks", force: :cascade do |t|
+    t.integer "task_id"
+    t.integer "user_id"
+    t.integer "category_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["category_id"], name: "index_bookmarks_on_category_id"
+    t.index ["task_id"], name: "index_bookmarks_on_task_id"
+    t.index ["user_id"], name: "index_bookmarks_on_user_id"
+  end
 
   create_table "categories", force: :cascade do |t|
     t.string "name", null: false
@@ -46,6 +57,9 @@ ActiveRecord::Schema.define(version: 2022_12_12_165222) do
     t.index ["username"], name: "index_users_on_username", unique: true
   end
 
+  add_foreign_key "bookmarks", "categories"
+  add_foreign_key "bookmarks", "tasks"
+  add_foreign_key "bookmarks", "users"
   add_foreign_key "categories", "users"
   add_foreign_key "tasks", "categories"
   add_foreign_key "tasks", "users"
