@@ -3,11 +3,15 @@ class CategoriesController < ApplicationController
 
   # GET /categories or /categories.json
   def index
+    @username = current_user.username
     @categories = Category.all
   end
 
   # GET /categories/1 or /categories/1.json
   def show
+    @tasks = Task.all
+
+
   end
 
   # GET /categories/new
@@ -69,4 +73,5 @@ class CategoriesController < ApplicationController
     def category_params
       params.require(:category).permit(:name, :user_id)
     end
+    
 end

@@ -28,7 +28,10 @@
 
   <div class="field">
     <%= form.label :category_id %>
-    <%= form.text_field :category_id %>
+    <%= form.select :category_id, Category.all.collect { |p| [ p.name, p.id ] }, include_blank: true %>
+    
+    <%# @category.map { |c| [c.name, c.id] }  %>
+
   </div>
 
   
