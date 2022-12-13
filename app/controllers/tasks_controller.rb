@@ -9,7 +9,9 @@ class TasksController < ApplicationController
 
   # GET /tasks/1 or /tasks/1.json
   def show
-    @date = Datetime.now()
+    @date = DateTime.now()
+    @date.to_fs(:long_ordinal)  # => "December 4th, 2007 00:00"
+
   end
 
   # GET /tasks/new

@@ -11,7 +11,7 @@ class CategoriesController < ApplicationController
   # GET /categories/1 or /categories/1.json
   def show
     @tasks = Task.all
-    @date = Datetime.now()
+    @date = DateTime.now()
 
   end
 
