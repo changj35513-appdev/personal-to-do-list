@@ -24,7 +24,6 @@ class TasksController < ApplicationController
     @task = Task.new(task_params)
     @task.user_id = current_user.id
     @task.state = "pending"
-    # @task.category_id = 
 
     @task.category_id = params[:task][:category_id]
     

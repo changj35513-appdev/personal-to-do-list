@@ -18,7 +18,7 @@
   <body>
 
     <% if current_user != nil %>
-      <%= link_to "To Do Lists", categories_path %>
+      <%= link_to "#{current_user.username}'s Plans", categories_path %>
       |
       <%= button_to "Sign Out", destroy_user_session_path, method: :delete %>
     <% else %>
