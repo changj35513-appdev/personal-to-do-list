@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_12_12_203438) do
+ActiveRecord::Schema.define(version: 2022_12_13_165300) do
 
   create_table "bookmarks", force: :cascade do |t|
     t.integer "task_id"

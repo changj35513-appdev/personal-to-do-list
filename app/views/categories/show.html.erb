@@ -23,18 +23,18 @@
     <% @tasks.each do |task| %>
       <tr>
         <td><%= task.content %></td>
-        <% datetime = task.deadline %>
-        <%# datetime.to_fs(:long_ordinal)%>  
-        <%# => "December 4th, 2007 00:00" %>
-        <%= time_between = @date - datetime %>
-        <% num_days = number_of_days.to_i %>
-          <% if num_days > 3 %>
-            <div style= "color: red">
-              <td><% task.deadline %></td>
-            </div>
-          <% else %>
-            <td><% task.deadline %></td>
-          <% end %>
+        <%# time = task.deadline %>
+        <%#= distance_of_time_in_words(time, @now)%>
+        <% x = DateTime.parse(task.deadline.to_s) %>
+        <% time_whole = @now - x %>
+        <% time_between_in_days = time_whole.to_i/365 %>
+        <% if time_between_in_days.to_i > 3 %>
+          <div>
+            <td style= "color: red"><%= distance_of_time_in_words(task.deadline, @now) %> ago</td>
+          </div>
+        <% else %>
+          <td>in <%= distance_of_time_in_words(task.deadline, @now) %></td>
+        <% end %>
         <td><%= link_to 'Edit', edit_task_path(task) %></td>
         <td><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
