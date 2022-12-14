@@ -35,7 +35,7 @@ class TasksController < ApplicationController
     respond_to do |format|
       if @task.save
         if @task.important == true
-          bookmark = Bookmark.new(bookmark_params)
+          bookmark = Bookmark.new
           bookmark.user_id = @task.user_id
           bookmark.category_id = @task.category_id
           bookmark.task_id = @task.id
@@ -101,8 +101,8 @@ class TasksController < ApplicationController
       params.require(:task).permit(:content, :deadline, :state, :category_id, :user_id, :important)
     end
 
-    def bookmark_params
-      params.require(:bookmark).permit(:task_id, :user_id, :category_id)
-    end
+    # def bookmark_params
+    #   params.require(:bookmark).permit(:task_id, :user_id, :category_id)
+    # end
 
 end
