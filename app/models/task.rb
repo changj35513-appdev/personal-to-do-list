@@ -25,7 +25,7 @@
 class Task < ApplicationRecord
   belongs_to :category
   belongs_to :user
-  has_many :bookmarks
+  has_many :bookmarks, :dependent => :delete_all
 
   enum status: { pending: "pending", rejected: "rejected", accepted: "accepted" }
 
