@@ -21,6 +21,7 @@ class TasksController < ApplicationController
 
   # GET /tasks/1/edit
   def edit
+
   end
 
   # POST /tasks or /tasks.json
@@ -41,7 +42,7 @@ class TasksController < ApplicationController
           bookmark.task_id = @task.id
           bookmark.save
         end
-        format.html { redirect_to task_url(@task), notice: "Task was successfully created." }
+        format.html { redirect_to tasks_url, notice: "Task was successfully created." }
         format.json { render :show, status: :created, location: @task }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -69,9 +70,10 @@ class TasksController < ApplicationController
 
   # PATCH/PUT /tasks/1 or /tasks/1.json
   def update
+    id = @task.category_id
     respond_to do |format|
       if @task.update(task_params)
-        format.html { redirect_to task_url(@task), notice: "Task was successfully updated." }
+        format.html { redirect_to category_url(id), notice: "Task was successfully updated." }
         format.json { render :show, status: :ok, location: @task }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -82,12 +84,12 @@ class TasksController < ApplicationController
 
   # DELETE /tasks/1 or /tasks/1.json
   def destroy
+    id = @task.category_id
 
     @task.destroy
 
-
     respond_to do |format|
-      format.html { redirect_to tasks_url, notice: "Task was successfully destroyed." }
+      format.html { redirect_to category_url(id), notice: "Task was successfully destroyed." }
       format.json { head :no_content }
     end
   end

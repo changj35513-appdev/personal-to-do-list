@@ -35,12 +35,13 @@ DONE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
  6. On each category, randomly generated color.
  7. Turn bookmarking task into an exclamation point checkbox and highlight underneath category title
  8. Next tasks (3 total displayed), fade out the other's text a little
- 9. Clicking on the Category title redirects us to the show page for that category.
+ 
  10. Hovering over task unfades it
  11. Hovering over Deadline Date reveals actual datetime
 
 
 DONE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
  1. Home page: delete User column from view. 
+ 9. Clicking on the Category title redirects us to the show page for that category.
  12. Turned Log in into drop down menu
  13. revised Log in devise/shared/links to remove redundant login
