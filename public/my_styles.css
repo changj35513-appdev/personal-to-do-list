@@ -4,7 +4,6 @@
   display:inline;
   background-size: cover;
   background: no-repeat center;
-  user-select: none;
   pointer-events: none;
   z-index: -99;
   /*custom styles, for example grayscale appearance*/
@@ -18,5 +17,9 @@
 }
 
 body {
+  color: white;
+}
+
+.form-actions {
   color: white;
 }

@@ -18,7 +18,7 @@
 #
 class Category < ApplicationRecord
   belongs_to :user
-  has_many :tasks
-  has_many :bookmarks
+  has_many :tasks, :dependent => :delete_all
+  has_many :bookmarks, :dependent => :delete_all
   
 end
