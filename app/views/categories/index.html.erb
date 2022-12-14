@@ -4,7 +4,7 @@
   <thead>
     <tr>
       <th>Name</th>
-      <th>User</th>
+      <%# <th>User</th> %>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -14,11 +14,13 @@
       <% if category.user_id == current_user.id %>
       <tr>
         <td><%= link_to category.name, category %></td>
-        <td><%= category.user_id %></td>
+        <td><% category.user_id %></td>
         <td><%= link_to 'Edit', edit_category_path(category) %></td>
         <td><%= button_to 'Destroy', category, method: :delete %></td>
       </tr>
+
       <% end %>
+
     <% end %>
   </tbody>
 </table>

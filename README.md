@@ -7,11 +7,11 @@
  1. As you work, remember to navigate to `/git` and **commit often as you work.**
 
 Functionality
- >> 6. Create a way to bookmark task: boolean? checkbox, available default: false
-      sort by deadline (asc? desc?), bookmarked ones go first
+
+      sort tasks by deadline (asc? desc?), bookmarked ones go first
  >> 7. Push tasks to top of list if bookmarked, else sort by deadline date 
  8. Debate if better to keep destroy, or set state to done and auto delete every friday
- >> 9. Make Drop Down Menu for Category when creating Task only show User's Categories
+
 
 DONE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 >> 1. Figure out how to save usernames into database. Figure out how to populate username as ownership of lists once signed in
@@ -23,12 +23,12 @@ DONE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     https://www.geeksforgeeks.org/ruby-datetime-now-function/
  4. Delete "show" and "back" options at bottom of the screen
 >> 5. Find a way to redirect to Category page after category created (may be under aesthetic, since i want pop up windows that fade background for inputs)
-
+ >> 6. Create a way to bookmark task: boolean? checkbox, available default: false
+ >> 9. Make Drop Down Menu for Category when creating Task only show User's Categories
  
 ✨ Aesthetic ✨
 
- 1. Home page: delete User column from view. 
- 2. Separate each list into it's own div.
+ >> 2. Separate each list into it's own div.
  3. Turn Edit and Delete into icon buttons.
  4. Once clicked, pop up little window to creat, change, confirm or deny
  5. Turn "New category" into own little plus icon at right edge of other lists
@@ -38,3 +38,7 @@ DONE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
  9. Clicking on the Category title redirects us to the show page for that category.
  10. Hovering over task unfades it
  11. Hovering over Deadline Date reveals actual datetime
+
+
+DONE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ 1. Home page: delete User column from view. 

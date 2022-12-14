@@ -23,7 +23,8 @@
   <tbody>
     <% @tasks.each do |task| %>
       <tr>
-        <td>Bookmark select</td>
+      
+        <td><%= task.important %></td>
         <td><%= task.content %></td>
         <%# time = task.deadline %>
         <%#= distance_of_time_in_words(time, @now)%>

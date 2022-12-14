@@ -10,7 +10,9 @@ class CategoriesController < ApplicationController
 
   # GET /categories/1 or /categories/1.json
   def show
-    @tasks = Task.all
+    @tasks = Task.all.order(deadline: :asc)
+    category_id = params.fetch("id")
+    @tasks = @tasks.where(:category_id => category_id)
     @now = DateTime.now()
 
   end
