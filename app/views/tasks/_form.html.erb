@@ -1,4 +1,5 @@
 <%= form_with(model: task, local: true) do |form| %>
+
   <% if task.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(task.errors.count, "error") %> prohibited this task from being saved:</h2>
@@ -34,7 +35,10 @@
 
   </div>
 
-  
+  <div class="field">
+    <%= form.label :important %>
+    <%= form.check_box :important %>
+ 
   <div class="field">
     <% form.label :user_id %>
     <% form.text_field :user_id %>

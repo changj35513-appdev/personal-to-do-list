@@ -16,6 +16,7 @@ class TasksController < ApplicationController
   # GET /tasks/new
   def new
     @task = Task.new
+    @bookmark = Bookmark.new
   end
 
   # GET /tasks/1/edit
@@ -24,15 +25,22 @@ class TasksController < ApplicationController
 
   # POST /tasks or /tasks.json
   def create
+    
     @task = Task.new(task_params)
     @task.user_id = current_user.id
     @task.state = "pending"
-
     @task.category_id = params[:task][:category_id]
+    @task.important = params[:task][:important]
     
-
     respond_to do |format|
       if @task.save
+        if @task.important == true
+          bookmark = Bookmark.new(bookmark_params)
+          bookmark.user_id = @task.user_id
+          bookmark.category_id = @task.category_id
+          bookmark.task_id = @task.id
+          bookmark.save
+        end
         format.html { redirect_to task_url(@task), notice: "Task was successfully created." }
         format.json { render :show, status: :created, location: @task }
       else
@@ -40,6 +48,23 @@ class TasksController < ApplicationController
         format.json { render json: @task.errors, status: :unprocessable_entity }
       end
     end
+
+    # @bookmark = Bookmark.new
+    # @bookmark.task_id = @task.id
+    # @bookmark.user_id = current_user.id
+    # @bookmark.category_id = @task.category_id
+
+    # respond_to do |format|
+    #   if @bookmark.save
+    #     format.html { redirect_to bookmark_url(@bookmark), notice: "Bookmark was successfully created." }
+    #     format.json { render :show, status: :created, location: @bookmark }
+    #   else
+    #     format.html { render :new, status: :unprocessable_entity }
+    #     format.json { render json: @bookmark.errors, status: :unprocessable_entity }
+    #   end
+    # end
+
+
   end
 
   # PATCH/PUT /tasks/1 or /tasks/1.json
@@ -73,6 +98,11 @@ class TasksController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def task_params
-      params.require(:task).permit(:content, :deadline, :state, :category_id, :user_id)
+      params.require(:task).permit(:content, :deadline, :state, :category_id, :user_id, :important)
     end
+
+    def bookmark_params
+      params.require(:bookmark).permit(:task_id, :user_id, :category_id)
+    end
+
 end
