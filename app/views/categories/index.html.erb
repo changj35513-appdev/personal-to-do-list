@@ -2,20 +2,20 @@
 
   <% @categories.each do |category| %>
     <% if category.user_id == current_user.id %>
-      <div class="card" style="width: 18rem;">
+      <div class="card translucent side-by-side" style="width: 18rem;">
       <%# <img class="card-img-top" src="..." alt="Card image cap"> %>
         <div class="card-body">
           <h5 class="card-title"><%= link_to "#{category.name}", category_url(category.id) %></h5>
           <%# <p class="card-text">Some quick example text</p> %>
         </div>
         <ul class="list-group list-group-flush">
-        <% if category.tasks.count > 0 %>
-         <% 3.times do |task| %>
+        <%# <% if category.tasks.count > 0 %>
+        <% 3.times do |task| %>
          <% if category.tasks.at(task) %>
           <li class="list-group-item"><%= category.tasks.at(task).content %></li>
          <% end %>
-         <% end %>
         <% end %>
+        <%# <% end %> 
         </ul>
         <div class="card-body">
           <%= link_to 'Edit', edit_category_path(category) %>

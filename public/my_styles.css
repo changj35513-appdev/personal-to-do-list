@@ -23,3 +23,12 @@ body {
 .form-actions {
   color: white;
 }
+
+.translucent {
+  opacity: .8;
+}
+
+.side-by-side {
+  display:inline-block;
+  object-position: 50%, top;
+}
