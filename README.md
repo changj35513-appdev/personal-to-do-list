@@ -7,8 +7,6 @@
  1. As you work, remember to navigate to `/git` and **commit often as you work.**
 
 Functionality
-
-      sort tasks by deadline (asc? desc?), bookmarked ones go first
  >> 7. Push tasks to top of list if bookmarked, else sort by deadline date 
  8. Debate if better to keep destroy, or set state to done and auto delete every friday
 
@@ -35,7 +33,6 @@ DONE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
  6. On each category, randomly generated color.
  7. Turn bookmarking task into an exclamation point checkbox and highlight underneath category title
  8. Next tasks (3 total displayed), fade out the other's text a little
- 
  10. Hovering over task unfades it
  11. Hovering over Deadline Date reveals actual datetime
 
