@@ -14,13 +14,23 @@
     <%= stylesheet_link_tag 'application', media: 'all' %>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/my_styles.css">
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
-   
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg bg-light">
+  <div>
+    <iframe 
+    class="bg-video"
+    src="https://www.youtube.com/embed/x69etlhievQ?&controls=0&autoplay=1&mute=1&playsinline=1&playlist=x69etlhievQ&loop=1"
+    frameBorder="0"
+    allowFullScreen
+    allow="autoplay" 
+    src= title="YouTube video player"
+    >
+    </iframe>
+</div>
+  <nav class="navbar navbar-expand-lg bg-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="/">
       <% if current_user != nil %>
@@ -73,5 +83,6 @@
     </nav>  
 
     <%= yield %>
+        </div>
   </body>
 </html>

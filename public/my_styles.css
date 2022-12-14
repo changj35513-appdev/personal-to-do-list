@@ -1,0 +1,22 @@
+ 
+.bg-video {
+  position: fixed;
+  display:inline;
+  background-size: cover;
+  background: no-repeat center;
+  user-select: none;
+  pointer-events: none;
+  z-index: -99;
+  /*custom styles, for example grayscale appearance*/
+  filter: grayscale(0.2);
+
+  /*additional tweaks for positioning, read more in the link above*/
+  height: 100%;
+  width: 177.77777778vh; /* 100 * 16 / 9 */
+  min-width: 100%;
+  min-height: 56.25vw; /* 100 * 9 / 16 */
+}
+
+body {
+  color: white;
+}
