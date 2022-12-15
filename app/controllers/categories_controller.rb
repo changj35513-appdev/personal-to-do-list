@@ -6,6 +6,9 @@ class CategoriesController < ApplicationController
   def index
     @username = current_user.username
     @categories = Category.all
+    # @tasks = Task.where(:category_id => @categories.id)
+    @bookmarks = Bookmark.all
+    
   end
 
   # GET /categories/1 or /categories/1.json

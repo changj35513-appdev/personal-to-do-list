@@ -20,8 +20,8 @@
         <%# <% end %> 
         </ul>
         <div class="card-body">
-          <%= link_to 'Add Task', new_task_path %>
-          <%= link_to 'Edit', edit_category_path(category) %>
+          <a href="/tasks/new" title="Image from freeiconspng.com"><img src="https://www.freeiconspng.com/uploads/plus-icon-black-2.png" width="36" alt="Plus Icon Black" /></a>
+          <a href="/categories/<%= category.id %>/edit" title="Image from freeiconspng.com"><img src="https://www.freeiconspng.com/uploads/edit-new-icon-22.png" width="24" alt="Edit, new, icon" /></a>
           <%= button_to 'Destroy', category, method: :delete %>
         </div>
 

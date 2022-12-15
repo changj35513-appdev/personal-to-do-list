@@ -9,7 +9,7 @@
 Functionality
  >> 7. Push tasks to top of list if bookmarked, else sort by deadline date 
  8. Debate if better to keep destroy, or set state to done and auto delete every friday
- >>>> 9. Delete category needs to work
+
 
 DONE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 >> 1. Figure out how to save usernames into database. Figure out how to populate username as ownership of lists once signed in
@@ -23,6 +23,7 @@ DONE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 >> 5. Find a way to redirect to Category page after category created (may be under aesthetic, since i want pop up windows that fade background for inputs)
  >> 6. Create a way to bookmark task: boolean? checkbox, available default: false
  >> 9. Make Drop Down Menu for Category when creating Task only show User's Categories
+>> 10. Delete category needs to work
  
 ✨ Aesthetic ✨
 
