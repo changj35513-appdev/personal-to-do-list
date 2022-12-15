@@ -3,4 +3,4 @@
 <%= render 'form', task: @task %>
 
 <%#= link_to 'Show', @task %>
-<%= link_to 'Back', category_url(@task.category_id) %>
+<a title="Back" href="/categories/<%= @task.category_id %>" style="filter: invert(1);" alt="Big Left Arrow Icon" width="24"><img src="https://www.freeiconspng.com/uploads/file-left-arrow-18.png"</a>

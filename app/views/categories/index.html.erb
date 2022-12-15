@@ -7,7 +7,8 @@
       <%# <img class="card-img-top" src="..." alt="Card image cap"> %>
 
         <div class="card-body">
-          <h5 class="card-title"><%= link_to "#{category.name}", category_url(category.id) %></h5>
+          <h5 class="card-title">
+          <div class="category-linkcolor"><%= link_to "#{category.name}", category_url(category.id) %></div></h5>
           <%# <p class="card-text">Some quick example text</p> %>
         </div>
         <ul class="list-group list-group-flush">
@@ -20,8 +21,8 @@
         <%# <% end %> 
         </ul>
         <div class="card-body">
-          <a href="/tasks/new" title="Image from freeiconspng.com"><img src="https://www.freeiconspng.com/uploads/plus-icon-black-2.png" width="36" alt="Plus Icon Black" /></a>
-          <a href="/categories/<%= category.id %>/edit" title="Image from freeiconspng.com"><img src="https://www.freeiconspng.com/uploads/edit-new-icon-22.png" width="24" alt="Edit, new, icon" /></a>
+          <a href="/tasks/new" title="Add Task"><img src="https://www.freeiconspng.com/uploads/plus-icon-black-2.png" width="36" alt="Plus Icon Black" /></a>
+          <a href="/categories/<%= category.id %>/edit" title="Edit List"><img src="https://www.freeiconspng.com/uploads/edit-new-icon-22.png" width="24" alt="Edit, new, icon" /></a>
           <%= button_to 'Destroy', category, method: :delete %>
         </div>
 
@@ -31,5 +32,3 @@
   <% end %>
     </div>
 <br>
-
-<%= link_to 'New Category', new_category_path %>

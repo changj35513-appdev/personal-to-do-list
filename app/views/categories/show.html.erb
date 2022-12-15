@@ -4,7 +4,7 @@
   <strong><%= @category.name %></strong>
 
 
-          <a href="/categories/<%= @category.id %>/edit" style="filter: invert(100%)" title="Image from freeiconspng.com"><img src="https://www.freeiconspng.com/uploads/edit-new-icon-22.png" width="16" alt="Edit, new, icon" /></a>
+          <a href="/categories/<%= @category.id %>/edit" style="filter: invert(100%)" title="Edit List"><img src="https://www.freeiconspng.com/uploads/edit-new-icon-22.png" width="16" alt="Edit, new, icon" /></a>
           <%= button_to 'Destroy', category_path(@category), method: :delete %>
 
 </p>
@@ -40,7 +40,7 @@
         <% else %>
           <td>in <%= distance_of_time_in_words(task.deadline, @now) %></td>
         <% end %>
-        <td>          <a href="/categories/<%= @category.id %>/edit" style="filter: invert(100%)" title="Image from freeiconspng.com"><img src="https://www.freeiconspng.com/uploads/edit-new-icon-22.png" width="16" alt="Edit, new, icon" /></a></td>
+        <td>          <a href="/tasks/<%= task.id %>/edit" style="filter: invert(100%)" title="Edit Task"><img src="https://www.freeiconspng.com/uploads/edit-new-icon-22.png" width="16" alt="Edit, new, icon" /></a></td>
         <td><%= button_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
@@ -49,4 +49,4 @@
 
 <br>
 
-<%= link_to 'New Task', new_task_path %>
+          <a href="/tasks/new" style="filter:invert(1)" title="Add Task"><img src="https://www.freeiconspng.com/uploads/plus-icon-black-2.png" width="36" alt="Plus Icon Black" /></a>
