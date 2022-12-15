@@ -26,23 +26,22 @@ DONE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 >> 10. Delete category needs to work
  
 ✨ Aesthetic ✨
-
-
-
  4. Once clicked, pop up little window to create, change, confirm or deny (modal)
- 5. Turn "New category" into own little plus icon at right edge of other lists
  6. On each category, turn background black and translucent
  7. Turn bookmarking task into an exclamation point checkbox and highlight underneath category title
  8. Next tasks (3 total displayed), fade out the other's text a little
  10. Hovering over task unfades it
  11. Hovering over Deadline Date reveals actual datetime
+ 
 
 
 DONE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
  1. Home page: delete User column from view. 
 >> 2. Separate each list into it's own div.
  3. Turn Edit and Delete into icon buttons.
+ 5. Turn "New category" into own little plus icon at right edge of other lists
  9. Clicking on the Category title redirects us to the show page for that category.
  12. Turned Log in into drop down menu
  13. revised Log in devise/shared/links to remove redundant login
  14. Moved login/sign out to right side
+ 15. Changed "Back" links to be prettier
