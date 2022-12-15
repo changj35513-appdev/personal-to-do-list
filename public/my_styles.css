@@ -33,6 +33,7 @@ body {
 .side-by-side {
   display:inline-block;
   object-position: 50%, top;
+  margin: 0 auto;
 }
 
 .form-inputs {
@@ -125,3 +126,20 @@ svg {
 .navbar-opacity {
   opacity: 50%;
 }
+
+login-linkcolor:link {
+  color: rgb(110,0,105);
+  width: 90%;
+  margin: 5px 5px;
+}
+
+/* .button {
+  border: none;
+  color: white;
+  transition-duration: 0.4s;
+  border-radius: 50%;
+}
+ 
+.button:hover {
+  background-color: white;
+} */

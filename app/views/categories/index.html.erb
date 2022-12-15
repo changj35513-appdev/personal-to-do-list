@@ -2,7 +2,7 @@
 
   <% @categories.each do |category| %>
     <% if category.user_id == current_user.id %>
-      <div class="card translucent side-by-side" style="width: 18rem;">
+      <div class="card translucent side-by-side" style="width: 18rem; margin: 0 auto;">
       <%# <img class="card-img-top" src="..." alt="Card image cap"> %>
         <div class="card-body">
           <h5 class="card-title"><%= link_to "#{category.name}", category_url(category.id) %></h5>

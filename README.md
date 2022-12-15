@@ -9,7 +9,7 @@
 Functionality
  >> 7. Push tasks to top of list if bookmarked, else sort by deadline date 
  8. Debate if better to keep destroy, or set state to done and auto delete every friday
- >> 9. Delete category needs to work
+ >>>> 9. Delete category needs to work
 
 DONE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 >> 1. Figure out how to save usernames into database. Figure out how to populate username as ownership of lists once signed in
@@ -43,3 +43,4 @@ DONE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
  9. Clicking on the Category title redirects us to the show page for that category.
  12. Turned Log in into drop down menu
  13. revised Log in devise/shared/links to remove redundant login
+ 14. Moved login/sign out to right side

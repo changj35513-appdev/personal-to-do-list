@@ -36,7 +36,7 @@
 <div class="navbar-color">
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
-      <a class="navbar-brand navbar-textcolor" href="/">
+      <a class="navbar-brand" href="/" style="color:white">
         <% if current_user != nil %>
           <%= "#{current_user.username}'s Plans" %>
         <% else %>
@@ -47,20 +47,20 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav navbar-textcolor me-auto mb-2 mb-lg-0">
+        <ul class="navbar-nav navbar-textcolor ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">
               <% if current_user != nil %>
-                <%= button_to "Sign Out", destroy_user_session_path, method: :delete %></a>
+                <%= button_to "Sign Out", destroy_user_session_path, method: :delete %></a></div>
               <% end %>
             </a>
           </li>
           <% if !current_user %>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle navbar-textcolor" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a class="nav-link dropdown-toggle navbar-textcolor" style="color:white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Log In
               </a>
-              <ul class="dropdown-menu navbar-opacity">
+              <ul class="dropdown-menu dropdown-menu-end navbar-opacity">
                 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
                   <div class="form-inputs">
                     <%= f.input :email,
@@ -76,7 +76,9 @@
                   <div class="form-actions navbar-textcolor">
                     <%= f.button :submit, "Log in" %>
                   </div>
+                  <div class="form-inputs">
                   <%= render "devise/shared/links" %>
+                  </div>
                 <% end %>
               </ul>
             </li>
