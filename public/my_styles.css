@@ -16,6 +16,8 @@
   min-height: 56.25vw; /* 100 * 9 / 16 */
 }
 
+
+
 body {
   color: white;
 }
@@ -31,4 +33,95 @@ body {
 .side-by-side {
   display:inline-block;
   object-position: 50%, top;
+}
+
+.form-inputs {
+  width: 90%;
+  margin: 5px 5px;
+  border-radius: 10px;
+}
+
+.form-actions {
+  margin:0 auto;
+  text-align: center;
+  transition:background 1s ease;
+  width: 40%;
+  border-radius: 50%;
+}
+.form-actions:hover {
+  background-color: rgb(110,0,105);
+}
+
+.collapse .navbar-collapse {
+  font-size: 90%;
+  margin: 5px;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+/* html, body{
+  height: 100%;
+  font-weight: 800;
+} */
+
+svg {
+    display: block;
+    font: 4.8em 'Montserrat';
+    width: 1200px;
+    height: 200px;
+    margin: 0 auto;
+
+
+}
+
+.text-copy {
+    fill: none;
+    stroke: white;
+    stroke-dasharray: 6% 28%;
+    stroke-width: 4px;
+    stroke-dashoffset: 0%;
+    animation: stroke-offset 5.5s infinite linear;
+}
+
+.text-copy:nth-child(1){
+  stroke: rgb(110,0,105);
+  animation-delay: -1;
+}
+
+.text-copy:nth-child(2){
+  stroke: rgb(234,124,124);
+  animation-delay: -2s;
+}
+
+.text-copy:nth-child(3){
+  stroke: rgb(183,13,144);
+  animation-delay: -3s;
+}
+
+.text-copy:nth-child(4){
+  stroke: rgb(122,13,81);
+  animation-delay: -4s;
+}
+
+.text-copy:nth-child(5){
+  stroke: rgb(231,66,157);
+  animation-delay: -5s;
+}
+
+@keyframes stroke-offset{
+  100% {stroke-dashoffset: -35%;}
+}
+
+.homepage-text{
+  position:relative;
+  top: 450px;
+  z-index: 50;
+}
+
+.navbar-textcolor {
+  color: white;
+}
+
+.navbar-opacity {
+  opacity: 50%;
 }

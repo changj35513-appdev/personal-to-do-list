@@ -18,6 +18,7 @@
         <%# <% end %> 
         </ul>
         <div class="card-body">
+          <%= link_to 'Add Task', new_task_path %>
           <%= link_to 'Edit', edit_category_path(category) %>
           <%= button_to 'Destroy', category, method: :delete %>
         </div>

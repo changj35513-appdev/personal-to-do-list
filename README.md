@@ -9,7 +9,7 @@
 Functionality
  >> 7. Push tasks to top of list if bookmarked, else sort by deadline date 
  8. Debate if better to keep destroy, or set state to done and auto delete every friday
-
+ >> 9. Delete category needs to work
 
 DONE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 >> 1. Figure out how to save usernames into database. Figure out how to populate username as ownership of lists once signed in
@@ -26,11 +26,11 @@ DONE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
  
 ✨ Aesthetic ✨
 
- >> 2. Separate each list into it's own div.
+
  3. Turn Edit and Delete into icon buttons.
  4. Once clicked, pop up little window to create, change, confirm or deny
  5. Turn "New category" into own little plus icon at right edge of other lists
- 6. On each category, randomly generated color.
+ 6. On each category, turn background black and translucent
  7. Turn bookmarking task into an exclamation point checkbox and highlight underneath category title
  8. Next tasks (3 total displayed), fade out the other's text a little
  10. Hovering over task unfades it
@@ -39,6 +39,7 @@ DONE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 DONE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
  1. Home page: delete User column from view. 
+>> 2. Separate each list into it's own div.
  9. Clicking on the Category title redirects us to the show page for that category.
  12. Turned Log in into drop down menu
  13. revised Log in devise/shared/links to remove redundant login
